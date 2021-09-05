@@ -110,6 +110,7 @@ class Environment:
 
         # Bind all BoundClass instances to "self" to improve performance.
         BoundClass.bind_early(self)
+        print('Validating that I am using Chelsey\'s version of SimPy')
 
     @property
     def now(self) -> SimTime:
