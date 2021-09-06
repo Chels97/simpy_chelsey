@@ -72,6 +72,7 @@ class Put(Event, ContextManager['Put'], Generic[ResourceType]):
         method is called automatically.
 
         """
+        print(self)
         if not self.triggered:
             self.resource.put_queue.remove(self)
 
