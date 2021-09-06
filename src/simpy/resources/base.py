@@ -73,9 +73,11 @@ class Put(Event, ContextManager['Put'], Generic[ResourceType]):
 
         """
         print('inside the cancel method')
-        print(self)
+        print('cancelling the following: ', self)
+        print('the job of the req is: ', self.obj.name)
         if not self.triggered:
             self.resource.put_queue.remove(self)
+        print(self, ' is removed successfully. ')
 
 
 class Get(Event, ContextManager['Get'], Generic[ResourceType]):
