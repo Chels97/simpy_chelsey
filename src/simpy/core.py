@@ -202,8 +202,8 @@ class Environment:
             # The event has failed and has not been defused. Crash the
             # environment.
             # Create a copy of the failure exception with a new traceback.
-            exc = type(event._value)(*event._value.args)
             print(event)
+            exc = type(event._value)(*event._value.args)
             exc.__cause__ = event._value
             raise exc
 
