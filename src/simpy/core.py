@@ -204,7 +204,7 @@ class Environment:
             # Create a copy of the failure exception with a new traceback.
             print('event', event)
             print('event value', event._value) 
-            print('event value args', event._value.args
+            print('event value args', event._value.args)
             exc = type(event._value)(*event._value.args)
             exc.__cause__ = event._value
             raise exc
